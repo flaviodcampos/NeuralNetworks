@@ -2,7 +2,7 @@ import random
 
 entrys = [[0,0],[0,1],[1,0],[1,1]]
 
-intended = [0,0,0,1] #A saída desejada é que define o tipo de porta que o algoritmo procura
+intended = [0,1,1,1] #A saída desejada é que define o tipo de porta que o algoritmo procura
 
 alpha = 0.7 #Taxa de aprendizado
 w = [] #Vetor de pesos
@@ -29,7 +29,7 @@ for epoca in range(epocaMax):
         w[1] = w[1] + alpha * entrys[i][0] * delta
         w[2] = w[2] + alpha * entrys[i][1] * delta
 
-    erroEpoca = erroEpoca + abs(delta)
+        erroEpoca = erroEpoca + abs(delta)
 
     if (erroEpoca == 0):
         break
