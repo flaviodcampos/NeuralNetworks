@@ -24,10 +24,11 @@ for epoca in range(epocaMax):
         else:
             results[i] = 1
 
-    delta = intended[i] - results[i]
-    w[0] = w[0] + alpha * delta
-    w[1] = w[1] + alpha * entrys[i][0] * delta
-    w[2] = w[2] + alpha * entrys[i][1] * delta
+        delta = intended[i] - results[i]
+        print(delta)
+        w[0] = w[0] + alpha * delta
+        w[1] = w[1] + alpha * entrys[i][0] * delta
+        w[2] = w[2] + alpha * entrys[i][1] * delta
 
     erroEpoca = erroEpoca + abs(delta)
 
